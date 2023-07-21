@@ -1,0 +1,27 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production nodemon ./src/server.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only --exit-child ./src/server.ts",
+    "seed": "ts-node-dev ./src/db/seeds/seeder"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "joi": "^17.9.2",
+    "migrate-mongo": "^10.0.0",
+    "mongoose": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/migrate-mongo": "^10.0.0",
+    "@types/node": "^20.4.2",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  }
+}
